@@ -1,38 +1,37 @@
-##############################################
-# Логгирование состояния сетевого напряжения #
-##############################################
+#############################################
+# Logging the state of the mains voltage #
+#############################################
 
-Логгирование изменения напряжения с помощью
-ИсточникаБесперебойногоПитания + networkupstools/nut.
+Logging voltage changes with
+UPS + networkupstools/nut.
 
-* Что делает?
+* What is he doing?
 
-Система логирования напряжения. 
-После запуска, ведется контроль напряжения. 
-Если напряжение изменилось, то будет сделана запись в лог.
+Voltage logging system.
+After starting, the voltage is monitored.
+If the voltage has changed, a log entry will be made.
 
-* Как использовать?
+* How to use?
 
-В системе должен быть установлен и настроен NUT.
-Логгер использует его данные.
-Выполнить 
+NUT must be installed and configured on the system.
+The logger uses his data.
+Run
 
 > make
 
- и запусть 
+ and run
 
 > ./monitor
 
-Чтобы прочитаь все состояние ИБП выполнить:
+To read all UPS status run:
 
-> make test
+>make test
 > ./test
 
-* Построение графика зависимости
-После того как логгер отработает какое-то время,
-можно запустить скрипт для построения графика изменения напряжения.
-График сохраняется в формате png с именем лога.
-Скрипт использует gnuplot.
+* Building dependency graph
+After the logger has worked for some time,
+you can run a script to plot the voltage change.
+The graph is saved in png format with the log name.
+The script uses gnuplot.
 
 > http://www.networkupstools.org/ | networkupstools/nut
-
